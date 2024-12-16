@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="css/button.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+  <title>Rent4u</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .announcements_section {
+      padding: 40px 0;
+    }
+
+    .announcement_item {
+      margin-bottom: 15px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Rent4u
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="user_option">
+
+            </div>
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a href="car.html">Arabalar</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Bizimle İletişime Geçin</a>
+                <a href="admin_giris.html">Admin</a>
+
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div class="slider_container">
+        <div class="img-box">
+          <img src="images/hero-img.jpg" alt="">
+        </div>
+        <div class="detail_container">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="detail-box">
+                  <a href="rent img1.html" target="_blank">
+                    <img style="margin-left: 50px; margin-bottom: 20px;" src="images/r-1.png" alt="">
+                  </a>
+
+                  <h3 style="color: white; margin-top: 10px;">Bugün için Özel Kampanya</h3>
+
+                  <a href="rent img1.html" target="_blank" style="margin-left: 80px; margin-top: 20px;">
+                    <button class="rent-button">Kirala <del>$200</del><br>$150</button>
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="detail-box">
+                  <a href="rent img2.html" target="_blank">
+                    <img style="margin-left: 50px; margin-bottom: 20px;" src="images/r-2.png" alt="">
+                  </a>
+                  <center>
+                    <h3 style="color: white; margin-top: 10px;">İlk Satın Almada İndirim</h3>
+                  </center>
+
+                  <a href="rent img2.html" target="_blank" style="margin-left: 50px; margin-top: 20px;">
+                    <button class="rent-button">Kirala <del>$200</del><br>$120</button>
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="rent img4.html" target="">
+                  <center><img src="images/r-4.png" alt=""></center>
+                </a>
+                <center>
+                  <h4 style="color: white; margin-top: 10px;">MasterCard Kullanıcılarına %50 İndirim</h4>
+                </center>
+
+                <a href="rent img4.html" target="_blank" style="margin-top: 20px;">
+                  <center><button class="rent-button" style="margin-top: 20px;">Kirala <del>$200</del><br>$100</button>
+                  </center>
+                </a>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="sr-only">Önceki</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="sr-only">Sonraki</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+
+    <!-- book section -->
+    <section class="announcements_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Özel Kampanyalar</h2>
+          <p>Otomobil kiralama şirketimizden önemli etkinlikler ve promosyonlar</p>
+        </div>
+        <div class="announcement_container">
+          <!-- Kampanya 1 -->
+          <div class="announcement_item">
+            <a href="#" onclick="openAnnouncementDetails('campaign1')">
+              <h4>İlk Kiralamada İndirim</h4>
+              <p>İlk kiralamanızda %20 indirim keyfini yaşayın!</p>
+            </a>
+          </div>
+          <!-- Kampanya 2 -->
+          <div class="announcement_item">
+            <a href="#" onclick="openAnnouncementDetails('campaign2')">
+              <h4>Hafta Sonu Özel</h4>
+              <p>Tüm araç modelleri için hafta sonu kiralamalarda sabit $100 fiyat!.</p>
+            </a>
+          </div>
+          <!-- Kampanya 3 -->
+          <div class="announcement_item">
+            <a href="#" onclick="openAnnouncementDetails('campaign3')">
+              <h4>Üyeler İçin Ücretsiz Güncelleme</h4>
+              <p>Loyalty üyeleri bir üst araç sınıfına ücretsiz güncelleme hak eder.</p>
+            </a>
+          </div>
+          <!-- Kampanya 4 -->
+          <div class="announcement_item">
+            <a href="#" onclick="openAnnouncementDetails('campaign4')">
+              <h4>Tatil Sezonu Özel</h4>
+              <p>Tatil sezonu boyunca %30'a varan indirimler! 1 Aralık ile 1 Ocak arasında geçerlidir.</p>
+            </a>
+          </div>
+          <!-- Kampanya 5 -->
+          <div class="announcement_item">
+            <a href="#" onclick="openAnnouncementDetails('campaign5')">
+              <h4>Uzun Dönem Kiralama Fırsatı</h4>
+              <p>Bir aydan uzun süreli kiralamalarda %15 indirim alabilirsiniz.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Announcement Details -->
+    <div id="announcementModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Kampanya Başlığı</h2>
+        <p id="modalContent">Kampanya detaylı içeriği...</p>
+        <a id="modalLink" href="#" target="_blank">PDF İndir</a>
+      </div>
+    </div>
+
+    <script>
+      // Function to open modal with specific campaign details
+      function openAnnouncementDetails(campaignId) {
+        document.getElementById('announcementModal').style.display = 'block';
+
+        // Campaign data for each announcement
+        const campaigns = {
+          'campaign1': {
+            title: 'İlk Kiralamada İndirim',
+            content: 'İlk kiralamanızda %20 indirim. Bu teklif tüm ilk kez araba kiralayan müşteriler için geçerlidir.',
+            link: 'path/to/first-rental-discount.pdf'
+          },
+          'campaign2': {
+            title: 'Hafta Sonu Özel',
+            content: 'Tüm araç modelleri için hafta sonu kiralamalarda sabit $100 fiyat. Hafta sonu rezervasyonları için geçerlidir.',
+            link: 'path/to/weekend-special.pdf'
+          },
+          'campaign3': {
+            title: 'Ücretsiz Güncelleme Üyeleri için',
+            content: 'Loyalty üyeleri bir üst araç sınıfına ücretsiz güncelleme hakkına sahiptir. Bugün rezervasyon yapın ve bu enhanced deneyimin tadını çıkarın.',
+            link: 'path/to/free-upgrade.pdf'
+          },
+          'campaign4': {
+            title: 'Tatil Sezonu Özel',
+            content: 'Tatillerle birlikte %30a varan indirimler! 1 Aralık ile 1 Ocak arasında geçerlidir.',
+            link: 'path/to/holiday-special.pdf'
+          },
+          'campaign5': {
+            title: 'Uzun Dönem Kiralama Fırsatı',
+            content: 'Bir aydan uzun süreli kiralamalarda %15 indirim alabilirsiniz. Uzun süreli ihtiyaçlar için idealdir.',
+            link: 'path/to/long-term-deal.pdf'
+          }
+        };
+
+        // Update modal with the selected campaign details
+        document.getElementById('modalTitle').innerText = campaigns[campaignId].title;
+        document.getElementById('modalContent').innerText = campaigns[campaignId].content;
+        document.getElementById('modalLink').href = campaigns[campaignId].link;
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        document.getElementById('announcementModal').style.display = 'none';
+      }
+
+      // Close modal when clicking outside of it
+      window.onclick = function (event) {
+        const modal = document.getElementById('announcementModal');
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      }
+    </script>
+
+    <!-- about section -->
+
+
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding-bottom">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 px-0">
+            <div class="img-box">
+              <img src="images/about-img.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="detail-box">
+              <h2>
+                Arabalarımız Hakkında
+              </h2>
+              <p>
+
+              </p>
+              <a target="_blank" href="car_readmore.html">
+                Daha Fazla
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end about section -->
+
+
+
+    <!-- best section -->
+
+    <section class="best_section">
+      <div class="container">
+        <div class="book_now">
+          <div class="detail-box">
+            <h2>
+              Arabalarımız
+            </h2>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- end best section -->
+
+    <!-- rent section -->
+
+    <section class="rent_section layout_padding">
+      <div class="container">
+        <div class="rent_container">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/r-1.png" alt="">
+            </div>
+            <div class="price">
+              <a href="rent img1.html" target="_blank">
+                Kirala $200
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/r-2.png" alt="">
+            </div>
+            <div class="price">
+              <a href="rent img2.html" target="_blank">
+                Kirala $200
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/r-3.png" alt="">
+            </div>
+            <div class="price">
+              <a href="rent img3.html" target="_blank">
+                Kirala $200
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/r-4.png" alt="">
+            </div>
+            <div class="price">
+              <a href="rent img4.html" target="_blank">
+                Kirala $200
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/r-5.png" alt="">
+            </div>
+            <div class="price">
+              <a href="rent img5.html" target="_blank">
+                Kirala $200
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/r-6.png" alt="">
+            </div>
+            <div class="price">
+              <a href="rent img6.html" target="_blank">
+                Kirala $200
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- end rent section -->
+    <section class="statistics_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>İstatistiklerimiz</h2>
+          <p>Performansımızın ve hizmetlerimizin görsel temsili.</p>
+        </div>
+        <div class="row">
+          <!-- Grafik 1: Araç Kullanımı -->
+          <div class="col-md-6">
+            <h3>Araç Kullanımı</h3>
+            <canvas id="vehicleUsageChart"></canvas>
+          </div>
+          <!-- Grafik 2: Müşteri Memnuniyeti -->
+          <div class="col-md-6">
+            <h3>Müşteri Memnuniyeti</h3>
+            <canvas id="customerSatisfactionChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Grafik 1: Araç Kullanımı
+      const ctx1 = document.getElementById('vehicleUsageChart').getContext('2d');
+      new Chart(ctx1, {
+        type: 'pie',
+        data: {
+          labels: ['Ekonomi', 'Lüks', 'SUV', 'Kompakt'],
+          datasets: [{
+            label: 'Araç Kullanımı (%)',
+            data: [40, 25, 20, 15],
+            backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0'],
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            },
+            title: {
+              display: true,
+              text: 'Araç Türlerinin Kullanımı'
+            }
+          }
+        }
+      });
+
+      // Grafik 2: Müşteri Memnuniyeti
+      const ctx2 = document.getElementById('customerSatisfactionChart').getContext('2d');
+      new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+          labels: ['Çok Memnun', 'Memnun', 'Nötr', 'Memnun Değil'],
+          datasets: [{
+            label: 'Müşteri Memnuniyeti (%)',
+            data: [60, 30, 8, 2],
+            backgroundColor: ['#4bc0c0', '#36a2eb', '#ffcd56', '#ff6384'],
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            },
+            title: {
+              display: true,
+              text: 'Müşteri Memnuniyet Seviyeleri'
+            }
+          }
+        }
+      });
+    </script>
+
+
+
+    <!-- blog section -->
+
+    <section class="blog_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            En Son Bloglarımız
+          </h2>
+          <p>
+            Bloglarımızı takip ederek en güncel bilgilerden haberdar olabilirsiniz.
+          </p>
+        </div>
+      </div>
+      <div class="blog_container">
+        <div class="layout_padding2-top">
+          <div class="carousel-wrap ">
+            <div class="owl-carousel">
+              <div class="item">
+                <div class="box">
+                  <div class="date-box">
+                    <h6>
+                      04 Kasım 2019
+                    </h6>
+                  </div>
+                  <div class="img-box">
+                    <img src="images/b-1.jpg" alt="Vintage">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      Vintage
+                    </h5>
+                    <p>
+                      Eski ve zamansız tasarımlar, hala büyük bir ilgi görüyor. Vintage dünyasına göz atın!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="date-box">
+                    <h6>
+                      04 Kasım 2019
+                    </h6>
+                  </div>
+                  <div class="img-box">
+                    <img src="images/b-2.jpg" alt="Direksiyonlar">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      Direksiyonlar
+                    </h5>
+                    <p>
+                      Araçlarda kullanılan farklı direksiyon modelleri ve tasarımlar hakkında bilgi edinin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="date-box">
+                    <h6>
+                      04 Kasım 2019
+                    </h6>
+                  </div>
+                  <div class="img-box">
+                    <img src="images/b-3.jpg" alt="Buick Araba">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      Buick Araba
+                    </h5>
+                    <p>
+                      Buick’in klasik ve modern tasarımları, otomobil tutkunlarının ilgisini çekiyor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="date-box">
+                    <h6>
+                      04 Kasım 2019
+                    </h6>
+                  </div>
+                  <div class="img-box">
+                    <img src="images/b-2.jpg" alt="Direksiyonlar">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      Direksiyonlar
+                    </h5>
+                    <p>
+                      Direksiyon tasarımlarındaki estetik ve işlevselliğin birleşimini keşfedin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end blog section -->
+
+    <!-- us section -->
+
+    <section class="us_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Neden Bizi Seçmelisiniz
+          </h2>
+          <p>
+            Müşterilerimiz için sunduğumuz ayrıcalıklı hizmetlerle fark yaratıyoruz.
+          </p>
+        </div>
+      </div>
+      <div class="us_container layout_padding2">
+        <div class="content_box">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/u-1.png" alt="Düşük Kiralama Ücreti">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Düşük Kiralama Ücreti
+              </h5>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/u-2.png" alt="Hızlı Araçlar">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Hızlı Araçlar
+              </h5>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/u-3.png" alt="Güvenli Araçlar">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Güvenli Araçlar
+              </h5>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="images/u-4.png" alt="Hızlı Destek">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Hızlı Destek
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end us section -->
+
+    <!-- client section -->
+
+    <section class="client_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Müşterilerimiz Ne Diyor?
+          </h2>
+          <p>
+            Hizmetlerimizle ilgili müşterilerimizin samimi görüşleri.
+          </p>
+        </div>
+        <div class="layout_padding2-top">
+          <div class="carousel-wrap ">
+            <div class="owl-carousel">
+              <div class="item">
+                <div class="box">
+                  <div class="detail-box">
+                    <p>
+                      Araç kiralama sürecim oldukça kolay ve hızlıydı. Her şey tam istediğim gibi oldu, kesinlikle
+                      tavsiye
+                      ederim.
+                    </p>
+                  </div>
+                  <div class="client_id">
+                    <div class="img-box">
+                      <img src="images/client-1.png" alt="" class="img-1">
+                      <img src="images/client-1-white.png" alt="" class="img-2">
+                    </div>
+                    <div class="name">
+                      <h6>
+                        Ahmet Yıldız
+                      </h6>
+                      <p>
+                        Memnun Müşteri
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="detail-box">
+                    <p>
+                      Araçlar temiz ve bakımlıydı. Seyahatim boyunca hiçbir sorun yaşamadım, teşekkürler!
+                    </p>
+                  </div>
+                  <div class="client_id">
+                    <div class="img-box">
+                      <img src="images/client-2.png" alt="" class="img-1">
+                      <img src="images/client-2-white.png" alt="" class="img-2">
+                    </div>
+                    <div class="name">
+                      <h6>
+                        Zeynep Arslan
+                      </h6>
+                      <p>
+                        Mutlu Müşteri
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="detail-box">
+                    <p>
+                      Fiyatlar oldukça uygun, ayrıca personel çok ilgili ve güler yüzlüydü. Tekrar tercih edeceğim.
+                    </p>
+                  </div>
+                  <div class="client_id">
+                    <div class="img-box">
+                      <img src="images/client-1.png" alt="" class="img-1">
+                      <img src="images/client-1-white.png" alt="" class="img-2">
+                    </div>
+                    <div class="name">
+                      <h6>
+                        Mehmet Kaya
+                      </h6>
+                      <p>
+                        Tavsiye Eden Müşteri
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="detail-box">
+                    <p>
+                      İlk defa bu kadar sorunsuz bir kiralama deneyimi yaşadım. Her şey kusursuzdu!
+                    </p>
+                  </div>
+                  <div class="client_id">
+                    <div class="img-box">
+                      <img src="images/client-1.png" alt="" class="img-1">
+                      <img src="images/client-1-white.png" alt="" class="img-2">
+                    </div>
+                    <div class="name">
+                      <h6>
+                        Elif Demir
+                      </h6>
+                      <p>
+                        Sadık Müşteri
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end client section -->
+
+    <!-- contact section -->
+
+    <section class="contact_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Bizimle İletişime Geçin
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="form_container">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputName4" placeholder="Adınız">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputSubject4" placeholder="Telefon">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="E-posta">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="inputMessage" placeholder="Mesajınız">
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="">Gönder</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end contact section -->
+
+    <!-- map section -->
+
+    <section class="map_section">
+      <!-- map section -->
+      <div class="map_container">
+        <div class="map-responsive">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+            width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- end map section -->
+    </section>
+
+
+    <!-- end map section -->
+
+    <!-- footer section -->
+    <footer class="container-fluid footer_section">
+      <p>
+        Copyright &copy; 2020 All Rights Reserved. Design by
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </footer>
+    <!-- footer section -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="js/custom.js"></script>
+    <!-- Footer Section -->
+    <footer class="container-fluid footer_section">
+      <p>
+        Copyright &copy; 2020 Tüm Hakları Saklıdır. Tasarım <a href="https://html.design/">Free Html Templates</a>
+        tarafından yapıldı.
+      </p>
+    </footer>
+
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <!-- Şirket Adresi -->
+          <div class="col-md-4">
+            <h4>Bize Ulaşın</h4>
+            <p>
+              123 Ana Cadde, Şehir Merkezi, ŞehirAdı, ÜlkeAdı<br>
+              Telefon: +1 234 567 890<br>
+              E-posta: info@rent4u.com
+            </p>
+          </div>
+          <!-- Hızlı Linkler -->
+          <div class="col-md-4">
+            <h4>Hızlı Linkler</h4>
+            <ul class="footer_links">
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="about.html">Hakkımızda</a></li>
+              <li><a href="car.html">Araçlar</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Bize Ulaşın</a></li>
+            </ul>
+          </div>
+          <!-- Sosyal Medya -->
+          <div class="col-md-4">
+            <h4>Bizi Takip Edin</h4>
+            <div class="social_icons">
+              <a href="https://facebook.com" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+              <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+              <a href="https://instagram.com" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+              <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>© 2024 Rent4u. Tüm Hakları Saklıdır.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer Styling -->
+    <style>
+      .footer_section {
+        background-color: #222;
+        color: #fff;
+        padding: 40px 0;
+      }
+
+      .footer_section h4 {
+        color: #ffcc00;
+        margin-bottom: 20px;
+      }
+
+      .footer_section p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer_links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer_links li {
+        margin-bottom: 10px;
+      }
+
+      .footer_links a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer_links a:hover {
+        text-decoration: underline;
+      }
+
+      .social_icons a {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .social_icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s;
+      }
+
+      .social_icons img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+
+
+
+</body>
+
+</html>

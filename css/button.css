@@ -1,0 +1,19 @@
+.rent-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #f22324; 
+    color: #fefdfc;
+    border: none; 
+    border-radius: 5px; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+    margin-left: 50px; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.rent-button:hover {
+    background-color: transparent; 
+    color: #f22324; 
+    border: 1px solid #f22324; 
+}

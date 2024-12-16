@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now - Rent4u</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .booking-form {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .booking-form h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Rent4u</a>
+    </nav>
+  </header>
+
+  <div class="booking-form">
+    <h1>Book Your Car</h1>
+    <form>
+      <div class="form-group">
+        <label for="carType">Car Type</label>
+        <select class="form-control" id="carType">
+          <option>Car 1</option>
+          <option>Car 2</option>
+          <option>Car 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pickupDate">Pickup Date</label>
+        <input type="date" class="form-control" id="pickupDate">
+      </div>
+      <div class="form-group">
+        <label for="returnDate">Return Date</label>
+        <input type="date" class="form-control" id="returnDate">
+      </div>
+      <div class="form-group">
+        <label for="userName">Your Name</label>
+        <input type="text" class="form-control" id="userName" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+        <input type="tel" class="form-control" id="contactNumber" placeholder="Enter your phone number">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2020 All Rights Reserved. Design by
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Footer Section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2020 Tüm Hakları Saklıdır. Tasarım <a href="https://html.design/">Free Html Templates</a>
+      tarafından yapıldı.
+    </p>
+  </footer>
+
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <!-- Şirket Adresi -->
+        <div class="col-md-4">
+          <h4>Bize Ulaşın</h4>
+          <p>
+            123 Ana Cadde, Şehir Merkezi, ŞehirAdı, ÜlkeAdı<br>
+            Telefon: +1 234 567 890<br>
+            E-posta: info@rent4u.com
+          </p>
+        </div>
+        <!-- Hızlı Linkler -->
+        <div class="col-md-4">
+          <h4>Hızlı Linkler</h4>
+          <ul class="footer_links">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="car.html">Araçlar</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Bize Ulaşın</a></li>
+          </ul>
+        </div>
+        <!-- Sosyal Medya -->
+        <div class="col-md-4">
+          <h4>Bizi Takip Edin</h4>
+          <div class="social_icons">
+            <a href="https://facebook.com" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>© 2024 Rent4u. Tüm Hakları Saklıdır.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer Styling -->
+  <style>
+    .footer_section {
+      background-color: #222;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .footer_section h4 {
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    .footer_section p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer_links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer_links li {
+      margin-bottom: 10px;
+    }
+
+    .footer_links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer_links a:hover {
+      text-decoration: underline;
+    }
+
+    .social_icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social_icons img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+    }
+
+    .social_icons img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Rent</title>
+
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div style="width: 800px; margin: auto; display: flex; flex-direction: column;">
+    <form>
+      <div class="container">
+        <center><img src="images/r-1.png" alt="" style="margin-top: 20px;"></center>
+        <h3 style="text-align: center; margin-top: 20px;">Araç Özellikleri</h3>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+          <div>
+            <p><strong>Marka :</strong> Ford Trucks</p>
+            <p><strong>Seri :</strong> Transit</p>
+            <p><strong>Model :</strong> 350L</p>
+            <p><strong>Yıl :</strong> 2021</p>
+          </div>
+          <div style="text-align: left;">
+            <p><strong>Taşıma Kapasitesi (kg):</strong> 3250</p>
+            <p><strong>Vites :</strong> Manuel</p>
+            <p><strong>Yakıt Tipi :</strong> Dizel</p>
+            <p><strong>Km :</strong> 125.000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 style="text-align: center;">Araç Kiralama Servisi</h1>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1" class="form-label">E-Posta Adresi</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="isim@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Ad</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Ad" aria-label="Ad">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Soyad</label>
+          <input type="text" class="form-control" id="lastnameInput" placeholder="Soyad" aria-label="Soyad">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefon Numarası:<br /><small>Format: 123-456-7890</small></label>
+          <input style="width: 258px;" type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="12"
+            oninput="formatPhone(this)" required />
+        </div>
+
+        <script>
+          function formatPhone(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 3 && value.length <= 6) {
+              input.value = value.slice(0, 3) + '-' + value.slice(3);
+            } else if (value.length > 6) {
+              input.value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+            } else {
+              input.value = value;
+            }
+          }
+        </script>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="agreementCheckbox">
+          <label class="form-check-label" for="agreementCheckbox">Sözleşmeyi Okudum ve Kabul Ediyorum</label>
+        </div>
+
+        <div class="form-group" style="text-align: center; margin-top: 25px;">
+          <button type="button" class="btn btn-primary" onclick="submitForm()">Kirala</button>
+        </div>
+      </div>
+    </form>
+    <div id="alertContainer"></div>
+  </div>
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2020 All Rights Reserved. Design by
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Footer Section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <!-- Company Address -->
+        <div class="col-md-4">
+          <h4>Contact Us</h4>
+          <p>
+            123 Main Street, Downtown, CityName, CountryName<br>
+            Phone: +1 234 567 890<br>
+            Email: info@rent4u.com
+          </p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h4>Quick Links</h4>
+          <ul class="footer_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="car.html">Cars</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Social Media -->
+        <div class="col-md-4">
+          <h4>Follow Us</h4>
+          <div class="social_icons">
+            <a href="https://facebook.com" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>© 2024 Rent4u. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer Styling -->
+  <style>
+    .footer_section {
+      background-color: #222;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .footer_section h4 {
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    .footer_section p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer_links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer_links li {
+      margin-bottom: 10px;
+    }
+
+    .footer_links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer_links a:hover {
+      text-decoration: underline;
+    }
+
+    .social_icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social_icons img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+    }
+
+    .social_icons img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <script>
+    function submitForm() {
+      const checkbox = document.getElementById('agreementCheckbox');
+      const alertContainer = document.getElementById('alertContainer');
+
+
+      alertContainer.innerHTML = '';
+
+      if (!checkbox.checked) {
+
+        alertContainer.innerHTML =
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> "Please read and approve the agreement before renting."
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          ;
+      } else {
+
+        alertContainer.innerHTML =
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Succesfull</strong> Form submitted successfully.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          ;
+      }
+      setTimeout(() => {
+        const alert = alertContainer.querySelector('.alert');
+        if (alert) {
+          alert.classList.remove('show');
+          alert.classList.add('hide');
+          setTimeout(() => alert.remove(), 500); // Animasyon bitince tamamen sil
+        }
+      }, 2500);
+    }
+
+  </script>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .admin-container {
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3 class="text-center">Admin Panel</h3>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#add-content">İçerik Ekleme</a>
+            <a href="#campaigns">Duyurular & Kampanyalar Yönetimi</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div id="dashboard">
+                <h2>Dashboard</h2>
+                <p>Admin paneline hoş geldiniz! Buradan içeriklerinizi yönetebilirsiniz.</p>
+            </div>
+
+            <div id="add-content" class="mt-5">
+                <h2>İçerik Ekleme</h2>
+                <form id="addContentForm">
+                    <div class="form-group">
+                        <label for="contentTitle">Başlık</label>
+                        <input type="text" class="form-control" id="contentTitle" placeholder="Başlık giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="contentBody">İçerik</label>
+                        <textarea class="form-control" id="contentBody" rows="5"
+                            placeholder="İçerik metnini giriniz"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="contentImage">Resim URL</label>
+                        <input type="text" class="form-control" id="contentImage" placeholder="Resim URL'si giriniz">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="addContent()">Ekle</button>
+                </form>
+            </div>
+            <div id="campaigns" class="mt-5">
+                <h2>Duyurular & Kampanyalar Yönetimi</h2>
+                <form id="campaignForm">
+                    <div class="form-group">
+                        <label for="campaignTitle">Kampanya Başlığı</label>
+                        <input type="text" class="form-control" id="campaignTitle" placeholder="Başlık giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="campaignDetails">Kampanya Detayları</label>
+                        <textarea class="form-control" id="campaignDetails" rows="4"
+                            placeholder="Kampanya detaylarını giriniz"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="addCampaign()">Ekle</button>
+                </form>
+                <ul id="campaignList" class="list-group mt-3">
+                    <!-- Kampanyalar burada listelenecek -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const contentList = document.getElementById('contentList');
+        const campaignList = document.getElementById('campaignList');
+
+        function addContent() {
+            const title = document.getElementById('contentTitle').value;
+            const body = document.getElementById('contentBody').value;
+            const image = document.getElementById('contentImage').value;
+
+            if (title && body && image) {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.innerHTML = `
+                    <h5>${title}</h5>
+                    <p>${body}</p>
+                    <img src="${image}" alt="${title}" style="width: 100px; height: auto;">
+                    <button class="btn btn-danger btn-sm mt-2" onclick="this.parentElement.remove()">Sil</button>
+                `;
+                contentList.appendChild(listItem);
+
+                // Formu temizle
+                document.getElementById('addContentForm').reset();
+            } else {
+                alert('Lütfen tüm alanları doldurun!');
+            }
+        }
+
+        function addCampaign() {
+            const title = document.getElementById('campaignTitle').value;
+            const details = document.getElementById('campaignDetails').value;
+
+            if (title && details) {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.innerHTML = `
+                    <h5>${title}</h5>
+                    <p>${details}</p>
+                    <button class="btn btn-danger btn-sm mt-2" onclick="this.parentElement.remove()">Sil</button>
+                `;
+                campaignList.appendChild(listItem);
+
+                // Formu temizle
+                document.getElementById('campaignForm').reset();
+            } else {
+                alert('Lütfen tüm alanları doldurun!');
+            }
+        }
+    </script>
+    <!-- footer section -->
+    <footer class="container-fluid footer_section">
+        <p>
+            Copyright &copy; 2020 All Rights Reserved. Design by
+            <a href="https://html.design/">Free Html Templates</a>
+        </p>
+    </footer>
+    <!-- footer section -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="js/custom.js"></script>
+    <!-- Footer Section -->
+    <footer class="container-fluid footer_section">
+        <p>
+            Copyright &copy; 2020 Tüm Hakları Saklıdır. Tasarım <a href="https://html.design/">Free Html Templates</a>
+            tarafından yapıldı.
+        </p>
+    </footer>
+
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <!-- Şirket Adresi -->
+                <div class="col-md-4">
+                    <h4>Bize Ulaşın</h4>
+                    <p>
+                        123 Ana Cadde, Şehir Merkezi, ŞehirAdı, ÜlkeAdı<br>
+                        Telefon: +1 234 567 890<br>
+                        E-posta: info@rent4u.com
+                    </p>
+                </div>
+                <!-- Hızlı Linkler -->
+                <div class="col-md-4">
+                    <h4>Hızlı Linkler</h4>
+                    <ul class="footer_links">
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="car.html">Araçlar</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Bize Ulaşın</a></li>
+                    </ul>
+                </div>
+                <!-- Sosyal Medya -->
+                <div class="col-md-4">
+                    <h4>Bizi Takip Edin</h4>
+                    <div class="social_icons">
+                        <a href="https://facebook.com" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+                        <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                        <a href="https://instagram.com" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+                        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png"
+                                alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>© 2024 Rent4u. Tüm Hakları Saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Styling -->
+    <style>
+        .footer_section {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer_section h4 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .footer_section p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer_links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 10px;
+        }
+
+        .footer_links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer_links a:hover {
+            text-decoration: underline;
+        }
+
+        .social_icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social_icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social_icons img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</body>
+
+</html>
